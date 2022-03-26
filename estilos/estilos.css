@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: .1s ease all;
+}
+
+/*navbar*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(224, 117, 46);
+    padding: 10px;
+}
+
+nav h3 {
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav h3 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+
+.switchDark {
+    background-color: #333;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switchDark span {
+    width: 30px;
+    height: 30px;
+    line-height: 43px;
+    display: block;
+    color: #fff;
+    background: none;
+}
+
+.switchDark::after {
+    display: block;
+    background: #fffbf5;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition: all .5s ease;
+    box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, .5);
+    content: "";
+}
+
+/*blog section*/
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+.intro h2 {
+    margin: 20px;
+}
+
+.intro h2 span {
+    color: red;
+}
+
+.intro img {
+    width: 60%;
+}
+
+.teaser {
+    width: 75%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+/*Opinion section*/
+.cite {
+    width: 60%;
+    margin: 15px auto;
+    background-color: green;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.cite h2,
+p {
+    padding: 10px;
+}
+
+.darklink {
+    text-decoration: none;
+}
+
+/*modal*/
+#open {
+    background-color: #fdd384;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, .5);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal {
+    background-color: #fffbf5;
+    max-width: 100%;
+    width: 1000px;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-container img {
+    width: 70%;
+}
+
+.close-modal {
+    cursor: pointer;
+    background-color: red;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    right: 448px;
+    top: 200px;
+}
+
+/*modo oscuro*/
+.switchDark.active {
+    background-color: #fdd384;
+}
+
+.switchDark.active::after {
+    left: unset;
+    right: 0;
+}
+.bdark #open {
+    background-color: rgb(39, 131, 39);
+}
+body.bdark {
+    background-color: #20202c;
+    color: #fff;
+}
+.bdark .modal {
+    background-color: #20202c;
+}
+.bdark nav {
+    background-color: #2e2e7a;
+}
+
+.bdark nav ul li a {
+    color: rgb(218, 218, 218);
+}
+
+.bdark nav h3 a {
+    color: rgb(218, 218, 218);
+}
+
+.bdark button {
+    color: rgb(218, 218, 218);
+}
+
+.bdark .cite {
+    background-color: #333;
+}
+
+.bdark .darklink {
+    color: rgb(39, 131, 39);
+}
+
+.bdark .teaser {
+    color: rgb(221, 221, 221);
+}
+
+.bdark .intro h2 span {
+    color: rgb(39, 131, 39);
+}
